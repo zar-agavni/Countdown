@@ -1,0 +1,56 @@
+.box-main{
+	margin: 70px auto;
+	width: 92%;
+}
+.box-left{
+	width: 48%;
+	float: left;
+}
+.box-right{
+	width: 48%;
+	float: right;
+}
+.box-left img{
+	width: 100%;
+}
+body{
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Roboto Mono';
+}
+h1{
+	color: #1a6aa2;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+}
+#info{
+	color: #829ab0;
+	margin-top: 30px;
+}
+#date{
+	margin-top: 0px;
+	font-weight: 900;
+}
+.countdown{
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+.countdown li{
+	width: 60px;
+	height: 60px;
+	float: left;
+	margin-right: 10px;
+	text-align: center;
+	background-color:  #102a42;
+	color: white;
+	padding: 10px;
+	font-weight: bolder;
+}
+.countdown li span{
+	font-size: 33px;
+}
+.countdown li p{
+	margin: 0px;
+	padding: 0px;
+}

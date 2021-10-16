@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap" rel="stylesheet">
+	<meta charset="utf-8">
+	<title>Countdown</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="box-main" >
+		<div class="box-left" >
+			<img src="https://vannilla-js-basic-project-12-countdown.netlify.app/gift.jpeg">
+		</div>
+		<div class="box-right" >
+			<h1>OLD IPHONE GIVEAWAY</h1>
+			<p id="date"><b>Giveaway Ends On Monday, 26 October 2021 11:30am</b></p>
+			<p id="info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit molestiae cum libero atque ut voluptate qui consectetur aliquid incidunt voluptatem quos, dolore, non commodi quaerat aliquam eligendi, quisquam totam blanditiis.</p>
+			<ul class="countdown">
+				<li>
+					<span id="countdown-day"></span>
+					<p>Days</p>
+				</li>
+				<li >
+					<span id="countdown-hour"></span>
+					<p>Hours</p>
+				</li>
+				<li>
+					<span id="countdown-minute"></span>
+					<p>Mins</p>
+				</li>
+				<li>
+					<span id="countdown-second"></span>
+					<p>Secs</p>
+				</li>
+			</ul>
+				
+		</div>
+
+	</div>
+
+	<script>
+		var countDownDate = new Date("Oct 26, 2021 11:30:00").getTime();
+		function countdown(){
+			var now = new Date().getTime();
+			var distance = countDownDate - now;
+			var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+			var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+			var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+	    	document.getElementById("countdown-day").innerHTML = days
+		    document.getElementById("countdown-hour").innerHTML = hours
+		    document.getElementById("countdown-minute").innerHTML = minutes
+		    document.getElementById("countdown-second").innerHTML = seconds
+		}
+
+		countdown()
+		var x = setInterval(function() {
+			countdown()
+			if (distance < 0) {
+				clearInterval(x);
+			}
+		}, 1000);
+	</script>
+</body>
+</html>
